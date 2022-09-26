@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital@1&display=swap');
+*{
+    margin: 0;
+    padding:0;
+}
+.sidebar{
+	background-color: black;
+    font-size: 30px;
+    color:white;
+     font-family: 'Merriweather Sans', sans-serif;
+     transition: transform 0.3s ease-in;
+     position: absolute;
+     width: 300px;
+
+}
+.sidebar nav{
+	padding: 20px;
+    height: 1000px;
+
+}
+.sidebar nav li{
+	list-style: none;
+	padding :33px;
+}
+.sidebar nav li a{
+    text-decoration: none;
+    color:white;
+}
+
+.main{
+    
+    width : 300vw;
+    height :50vw;
+    padding-top:40px;
+    padding-right:30px;
+}
+.info{
+	color:black;
+margin-left:10vw;
+	font-size: 45px;
+	width : 45vw;
+    height :30vw;
+  
+    
+}
+.info2{
+    line-height: 60px;
+	text-align: center;
+    display: flex;
+	background-color: black;
+	color:white;
+	font-size: 30px;
+	width : 73vw;
+    height :15vw;
+    margin-left: 20vw;
+   
+    
+}
+
+.info3{
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    background-color: transparent;
+    color:darkorange;
+    font-size: 30px;
+    width : 73vw;
+    height :40vw;
+    margin-left: 15vw;
+    margin-top:2vw;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 2em;
+}
+.info3 nav{
+    padding: 20px;
+}
+.info3 nav li{
+    list-style: none;
+    padding :33px;
+}
+
+.box{
+    display : flex;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+@media(max-width: 1245px){
+
+.sidebarGo{
+
+    transform: translate(-500px,0px);
+    position: absolute;
+
+}
+body{
+    background:black url("pic.jpg") no-repeat fixed center;
+}
+
+.devPic img{
+    display: none;
+}
+.info{
+    font-size: 80px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 280px;
+    margin-top: 70px;
+}
+.info2{
+    padding:30px;
+    margin-top:600px;
+    font-size: 35px;
+    margin-left: 110px;
+    height: 30vw;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 5em;
+}
+td{
+    font-size: 20px;
+}
+th{
+ font-size: 20px;
+}
+.info3 nav li{
+   line-height: 300px;
+}
+.info3{
+    margin-top:100px;
+   font-size: 35px;
+}
+.info3 nav li img{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+}
+.sidebar{
+    width:350px;
+}
+.sidebar nav{
+    padding: 20px;
+    height: 2090px;
+width: 300px;
+}
+.sidebar nav li{
+    list-style: none;
+    padding :60px;
+}
+.cross{
+    margin-left: 500px;
+    padding-left: 40px;
+    padding-top:20px;
+}
+}
+
+.sidebarGo{
+
+    transform: translate(-500px,0px);
+    position: absolute;
+
+}
+
+.cross{
+    margin-left: 250px;
+    margin-top: 10px;
+}
+.hamburger{
+    position: absolute;
+cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
