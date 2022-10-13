@@ -5,22 +5,28 @@
 }
 .sidebar{
 	background-color: black;
-    font-size: 30px;
+    font-size: 25px;
     color:white;
      font-family: 'Merriweather Sans', sans-serif;
      transition: transform 0.3s ease-in;
      position: absolute;
-     width: 300px;
-
+     width: 245px;
+    
+ align-items: center;
+}
+.sidebar nav li img{
+    border-radius: 50%;
+    background-color:  rgb(15, 37, 65);
 }
 .sidebar nav{
-	padding: 20px;
+    width: 250px;
     height: 1000px;
 
 }
 .sidebar nav li{
 	list-style: none;
-	padding :33px;
+	padding :18px;
+    margin: 10px;
 }
 .sidebar nav li a{
     text-decoration: none;
@@ -49,9 +55,9 @@ margin-left:10vw;
     display: flex;
 	background-color: black;
 	color:white;
-	font-size: 30px;
+	font-size: 23px;
 	width : 73vw;
-    height :15vw;
+    height :250px;
     margin-left: 20vw;
    
     
@@ -64,7 +70,7 @@ margin-left:10vw;
     display: flex;
     background-color: transparent;
     color:darkorange;
-    font-size: 30px;
+    font-size: 25px;
     width : 73vw;
     height :40vw;
     margin-left: 15vw;
@@ -81,12 +87,18 @@ table{
     list-style: none;
     padding :33px;
 }
+.info3 nav li img{
+    background-color: white;
+}
+.devPic img{
+margin-right: 20px;
+}
 
 .box{
     display : flex;
     font-family: 'Merriweather Sans', sans-serif;
 }
-@media(max-width: 1245px){
+@media(max-width: 1054px){
 
 .sidebarGo{
 
@@ -113,21 +125,25 @@ body{
     margin-top:600px;
     font-size: 35px;
     margin-left: 110px;
-    height: 30vw;
+    height: 45vw;
 }
 table{
     border-collapse: separate;
-    border-spacing: 0 5em;
+    border-spacing: 1em 5em;
+    
 }
 td{
-    font-size: 20px;
+    font-size: 23px;
+
 }
 th{
- font-size: 20px;
+ font-size: 25px;
+
 }
 .info3 nav li{
-   line-height: 300px;
+  line-height:300px;
 }
+  
 .info3{
     margin-top:100px;
    font-size: 35px;
@@ -138,22 +154,43 @@ th{
     background-color: white;
 }
 .sidebar{
-    width:350px;
+    width:410px;
 }
+
 .sidebar nav{
-    padding: 20px;
+    margin-top:50px;
+    margin-left: 10px;
     height: 2090px;
-width: 300px;
+width: 400px;
 }
 .sidebar nav li{
     list-style: none;
-    padding :60px;
+    padding :50px;
+    font-size: 40px;
+}
+.{
+
+}
+.hamburger{
+    position: absolute;
+cursor: pointer;
+    margin-top:30px;
+    margin-left: 35px;
+
 }
 .cross{
-    margin-left: 500px;
-    padding-left: 40px;
-    padding-top:20px;
+    align-content: top;
+    width: 30px;
+padding-left: 100px;
 }
+.sidebar nav li img{
+    width: 230px;
+    height: 230px;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(15, 37, 65);
+}
+
 }
 
 .sidebarGo{
@@ -164,12 +201,13 @@ width: 300px;
 }
 
 .cross{
-    margin-left: 250px;
-    margin-top: 10px;
+    margin-left: 180px;
+    margin-top: 5px;
+   
 }
 .hamburger{
     position: absolute;
 cursor: pointer;
-    top: 10px;
-    left: 10px;
+   top: 20px;
+    left: 20px;
 }

@@ -1,0 +1,12 @@
+$(".new").mouseover(function(){
+    $(this).animate({
+        height:'130px',
+        width:'130px',left:'-11px'
+    });
+});
+$(".new").mouseout(function(){
+    $(this).animate({
+        height:'100px',
+        width:'100px',left:'0'
+    });
+});
