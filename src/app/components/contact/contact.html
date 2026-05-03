@@ -1,0 +1,80 @@
+<div class="container">
+
+  <div class="contact-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+
+      <h2>Let’s build something meaningful</h2>
+
+      <p>
+        Whether it's a project, idea, or opportunity —
+        I’d love to connect and collaborate.
+      </p>
+
+      <div class="info-item">
+        <span>📧</span>
+        <p><a href="mailto:medhagupta312002@gmail.com">medhagupta312002@gmail.com</a></p>
+      </div>
+
+      <div class="info-item">
+        <span>📍</span>
+        <p>Bareilly, India</p>
+      </div>
+
+    </div>
+
+    <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+      <!-- NAME -->
+      <mat-form-field appearance="outline">
+        <mat-label>Your Name</mat-label>
+        <input matInput formControlName="name" />
+
+        @if (contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched) {
+        <mat-error>
+          Name is required
+        </mat-error>
+        }
+      </mat-form-field>
+
+      <!-- EMAIL -->
+      <mat-form-field appearance="outline">
+        <mat-label>Your Email</mat-label>
+        <input matInput formControlName="email" />
+
+        @if (contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched) {
+        <mat-error>
+          Email is required
+        </mat-error>
+        }
+
+        @if (contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched) {
+        <mat-error>
+          Enter a valid email address
+        </mat-error>
+        }
+      </mat-form-field>
+
+      <!-- MESSAGE -->
+      <mat-form-field appearance="outline">
+        <mat-label>Your Message</mat-label>
+        <textarea matInput rows="5" formControlName="message"></textarea>
+
+        @if (contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched) {
+        <mat-error>
+          Message cannot be empty
+        </mat-error>
+        }
+      </mat-form-field>
+
+      <!-- BUTTON -->
+      <button mat-raised-button color="primary" type="submit" [disabled]="loading || contactForm.invalid">
+        {{ loading ? 'Sending...' : 'Send Message' }}
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

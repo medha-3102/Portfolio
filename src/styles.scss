@@ -1,1 +1,209 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+/* Default DARK theme */
+:root {
+  /* 🌙 DARK THEME */
+
+  /* Base */
+  --bg: #0b1120;
+  --bgnav: rgba(11, 17, 32, 0.75);
+  --card: #111827;
+  --card-soft: #1f2937;
+
+  /* Text */
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  /* Borders */
+  --border: rgba(255,255,255,0.08);
+
+  /* 🎯 Primary Accents */
+  --accent: #7c3aed;        /* Purple */
+  --accent-hover: #6d28d9;
+
+  /* 🌈 Secondary Accents */
+  --cyan: #22d3ee;
+  --green: #22c55e;
+  --orange: #f97316;
+  --pink: #ec4899;
+
+  /* Soft backgrounds */
+  --accent-soft: rgba(124, 58, 237, 0.15);
+  --green-soft: rgba(34, 197, 94, 0.15);
+  --orange-soft: rgba(249, 115, 22, 0.15);
+  --pink-soft: rgba(236, 72, 153, 0.15);
+}
+
+/* ☀️ LIGHT THEME */
+body.light-theme {
+  --bg: #f9fafb;
+  --bgnav: rgba(255,255,255,0.8);
+  --card: #ffffff;
+  --card-soft: #f3f4f6;
+
+  --text: #111827;
+  --text-muted: #6b7280;
+
+  --border: rgba(0,0,0,0.08);
+
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+
+  --cyan: #0891b2;
+  --green: #16a34a;
+  --orange: #ea580c;
+  --pink: #db2777;
+
+  --accent-soft: rgba(99, 102, 241, 0.12);
+  --green-soft: rgba(34, 197, 94, 0.12);
+  --orange-soft: rgba(249, 115, 22, 0.12);
+  --pink-soft: rgba(236, 72, 153, 0.12);
+}
+/* Apply variables */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
 /* You can add global styles to this file, and also import other style files */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 1. Put this in your GLOBAL styles.scss file */
+
+.theme-toggle {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: visible !important;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px !important;
+  height: 20px !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Ensure icons have size globally */
+.sun, .moon {
+  width: 18px !important;
+  height: 18px !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+}
+
+/* DARK MODE (Default - when light-theme is NOT on body) */
+body:not(.light-theme) .sun {
+  display: none !important;
+}
+
+body:not(.light-theme) .moon {
+  display: block !important;
+  background-color: transparent !important;
+  border-radius: 50% !important;
+  box-shadow: -6px 0px 0 0 #ffffff !important;
+  transform: translate(-15%, -50%) !important;
+}
+
+/* LIGHT MODE (When light-theme IS on body) */
+body.light-theme .moon {
+  display: none !important;
+}
+
+body.light-theme .sun {
+  display: block !important;
+  background-color: #fb923c !important;
+  border-radius: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  box-shadow: 0 0 10px #fb923c;
+}
+
+
+/* Utility */
+.container {
+  width: 94%;
+  max-width: 1700px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.mat-mdc-form-field-required-marker {
+  color: #ef4444 !important;
+}
+.card {
+  background: var(--card);
+//   backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid var(--border);
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Glow effect */
+.card::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--accent2), transparent);
+  opacity: 0.05;
+  top: -50%;
+  left: -50%;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade animation */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+
+.container {
+  width: 90%;
+}
+}

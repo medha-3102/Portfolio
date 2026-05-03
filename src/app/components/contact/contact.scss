@@ -1,0 +1,175 @@
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 60px;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.contact-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* INFO ITEMS */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.info-item span {
+  font-size: 1.2rem;
+}
+
+/* ================= RIGHT SIDE (MATERIAL FIX) ================= */
+.contact-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  transition: 0.3s ease;
+}
+
+/*  MATERIAL FORM FIELD OVERRIDES */
+.contact-form mat-form-field {
+  width: 100%;
+}
+
+/* make Material inputs match dark/light theme */
+.contact-form ::ng-deep .mat-mdc-form-field {
+  width: 100%;
+}
+
+.contact-form ::ng-deep .mat-mdc-text-field-wrapper {
+  background: transparent;
+}
+
+/* FOCUS GLOW (Material friendly) */
+.contact-form ::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline {
+  border-color: var(--accent) !important;
+}
+
+.contact-form ::ng-deep input,
+.contact-form ::ng-deep textarea {
+  color: var(--text);
+}
+
+/* BUTTON */
+.contact-form button {
+  margin-top: 10px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+}
+
+/* HOVER */
+.contact-form:hover {
+  transform: translateY(-4px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+}
+
+/* ================= SNACKBAR BASE ================= */
+::ng-deep .mdc-snackbar {
+  min-height: unset !important;
+  height: auto !important;
+}
+
+/* REMOVE DEFAULT FLEX STRETCH */
+::ng-deep .mdc-snackbar__surface {
+  align-items: center !important;
+}
+
+/* MAIN CONTAINER FIX */
+::ng-deep .mat-mdc-snack-bar-container {
+  min-height: unset !important;
+  height: auto !important;
+}
+
+/* INNER WRAPPER (IMPORTANT) */
+::ng-deep .mdc-snackbar__label {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+}
+
+/* FINAL TIGHT VERSION */
+::ng-deep .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  padding: 6px 10px !important;   /* even tighter */
+  min-height: unset !important;
+  height: auto !important;
+}
+/* ================= SUCCESS ================= */
+::ng-deep .snackbar-success .mdc-snackbar__surface {
+  background: #16a34a !important;
+  color: #ffffff !important;
+}
+
+/* ================= ERROR ================= */
+::ng-deep .snackbar-error .mdc-snackbar__surface {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* ================= ACTION BUTTON ================= */
+::ng-deep .mat-mdc-snack-bar-action {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+}
+
+.req {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.mat-mdc-form-field-error,
+mat-error {
+  color: #ef4444 !important;
+  font-size: 12px;
+  font-weight: 500;
+}
+.contact-form ::ng-deep .mdc-text-field__input {
+  padding-left: 8px !important;
+}
+/* EMAIL LINK STYLE */
+.info-item a {
+  color: #60a5fa; /* soft readable blue */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.info-item a:hover {
+  color: #93c5fd; /* lighter on hover */
+}
