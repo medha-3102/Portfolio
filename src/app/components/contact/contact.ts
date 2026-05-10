@@ -8,17 +8,23 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from '../../services/contact.service';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    HttpClientModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule
-  ],
+imports: [
+  ReactiveFormsModule,
+  HttpClientModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatChipsModule
+],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })

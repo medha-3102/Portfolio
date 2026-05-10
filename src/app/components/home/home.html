@@ -1,27 +1,26 @@
 <div class="home">
 
-  <div class="home-wrap"> <!-- like nav-wrap -->
+  <div class="home-wrap">
 
-    <div class="home-card container"> <!-- like nav-bar -->
+    <!-- ONLY changed div -> mat-card -->
+    <mat-card class="home-card">
 
       <div class="home-grid">
 
         <!-- LEFT CONTENT -->
         <div class="content">
 
-          <div class="intro-row">
-            <span class="dot"></span>
-            <p class="intro">Hi, I’m</p>
-          </div>
+          <p class="intro">Hi, I’m</p>
 
           <h1 class="name">
             <span #typingText></span>
             <span class="cursor">|</span>
           </h1>
 
-          <div class="role-chip">
+          <!-- ONLY changed div -> mat-chip -->
+          <mat-chip class="role-chip">
             Product-minded Developer • Angular • Spring Boot
-          </div>
+          </mat-chip>
 
           <h2 class="tagline">
             I build systems that make complexity feel simple.
@@ -35,14 +34,29 @@
           </p>
 
           <div class="buttons">
-            <button (click)="scrollToProjects()">View My Work</button>
-            <button class="outline" (click)="downloadResume()">Download Resume</button>
+
+            <!-- ONLY changed button -> mat button -->
+            <button
+              mat-flat-button
+              color="primary"
+              (click)="scrollToProjects()">
+              View My Work
+            </button>
+
+            <button
+              mat-stroked-button
+              class="outline"
+              (click)="downloadResume()">
+              Download Resume
+            </button>
+
           </div>
 
         </div>
 
         <!-- RIGHT VISUAL -->
         <div class="visual">
+
           <div class="profile-card">
 
             <!-- BIG IMAGE -->
@@ -51,21 +65,42 @@
             </div>
 
             <!-- LOCATION -->
-            <p class="location">📍 Bareilly,UP, India</p>
+            <p class="location">
+              <mat-icon>location_on</mat-icon>
+              Bareilly, UP, India
+            </p>
+
             <!-- EMAIL -->
             <a href="mailto:medhagupta312002@gmail.com" class="email">
+              <mat-icon>mail</mat-icon>
               medhagupta312002@gmail.com
             </a>
+
             <!-- SOCIALS -->
             <div class="socials">
 
-              <a href="https://github.com/medha-3102/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
+              <a
+                href="https://github.com/medha-3102/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
+
+                <button mat-mini-fab>
+                  <i class="fa-brands fa-github"></i>
+                </button>
+
               </a>
 
-              <a href="https://www.linkedin.com/in/medha-gupta-5b6838185/" target="_blank" rel="noopener noreferrer"
+              <a
+                href="https://www.linkedin.com/in/medha-gupta-5b6838185/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+
+                <button mat-mini-fab color="primary">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </button>
+
               </a>
 
             </div>
@@ -76,7 +111,7 @@
 
       </div>
 
-    </div>
+    </mat-card>
 
   </div>
 

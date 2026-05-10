@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ContactService {
 
-  private endpoint = 'YOUR_API_ENDPOINT';
+  private endpoint = 'https://formspree.io/f/xrgnkjvo';
 
   constructor(private http: HttpClient) {}
 

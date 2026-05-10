@@ -1,34 +1,59 @@
 <nav class="nav-wrap">
 
-  <mat-toolbar class="nav-bar container">
+  <!-- MUI TOOLBAR -->
+  <mat-toolbar class="nav-bar">
 
     <!-- LOGO -->
     <div class="nav-left">
-      <h2 class="logo" (click)="scrollTo('hero')">
-        Medha
-      </h2>
+
+      <button
+        mat-button
+        class="logo-btn"
+        (click)="scrollTo('hero')">
+
+        <h2 class="logo">
+          Medha
+        </h2>
+
+      </button>
+
     </div>
 
     <!-- NAV ITEMS -->
     <div class="nav-center" [class.open]="menuOpen">
 
-      <button mat-button (click)="scrollTo('hero')" [class.active]="activeSection === 'hero'">
+      <button
+        mat-button
+        (click)="scrollTo('hero')"
+        [class.active]="activeSection === 'hero'">
         Home
       </button>
 
-      <button mat-button (click)="scrollTo('impact')" [class.active]="activeSection === 'impact'">
+      <button
+        mat-button
+        (click)="scrollTo('impact')"
+        [class.active]="activeSection === 'impact'">
         About
       </button>
 
-      <button mat-button (click)="scrollTo('skills')" [class.active]="activeSection === 'skills'">
+      <button
+        mat-button
+        (click)="scrollTo('skills')"
+        [class.active]="activeSection === 'skills'">
         Skills
       </button>
 
-      <button mat-button (click)="scrollTo('projects')" [class.active]="activeSection === 'projects'">
+      <button
+        mat-button
+        (click)="scrollTo('projects')"
+        [class.active]="activeSection === 'projects'">
         Projects
       </button>
 
-      <button mat-button (click)="scrollTo('contact')" [class.active]="activeSection === 'contact'">
+      <button
+        mat-button
+        (click)="scrollTo('contact')"
+        [class.active]="activeSection === 'contact'">
         Contact
       </button>
 
@@ -37,9 +62,15 @@
     <!-- RIGHT -->
     <div class="nav-right">
 
-      <!--  THEME TOGGLE -->
-      <button type="button" class="theme-toggle" (click)="theme.toggleTheme()" aria-live="polite"
+      <!-- THEME TOGGLE -->
+      <button
+        mat-icon-button
+        type="button"
+        class="theme-toggle"
+        (click)="theme.toggleTheme()"
+        aria-live="polite"
         [attr.aria-label]="theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
+
         <span class="sr-only">
           {{ theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode' }}
         </span>
@@ -48,10 +79,19 @@
           <div class="sun"></div>
           <div class="moon"></div>
         </div>
+
       </button>
+
       <!-- MOBILE MENU -->
-      <button mat-icon-button class="menu-icon" (click)="toggleMenu()">
-        <mat-icon>menu</mat-icon>
+      <button
+        mat-icon-button
+        class="menu-icon"
+        (click)="toggleMenu()">
+
+        <mat-icon>
+          {{ menuOpen ? 'close' : 'menu' }}
+        </mat-icon>
+
       </button>
 
     </div>
